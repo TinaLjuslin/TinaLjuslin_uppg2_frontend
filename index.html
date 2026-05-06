@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang='sv'>
+
+<head>
+    <title>Wigellkoncernens styleguide</title>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width initial-scale=1.0' />
+    <link rel='stylesheet' href='style.css' />
+    <link rel='stylesheet' href='styleMobile.css' media='screen and (max-width: 768px)'>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'
+        rel='stylesheet'>
+    <link rel='icon' type='image/jpg' href='img/wigellLogo_white.jpg'>
+</head>
+
+<body>
+    <div class='wrapper'>
+        <nav class='sidebar'>
+            <ul>
+                <li>
+                    <h1><img id='sidebar-logo' src='img/wigellLogo_semidark.jpg'></h1>
+                </li>
+                <li><a href='#introduction'>Introduktion</a></li>
+                <li><a href='#headlines'>Rubriker</a></li>
+                <li><a href='#bodytext'>Brödtext</a></li>
+                <li><a href='#buttons'>Knappar</a>
+                    <ul class='sub-menu'>
+                        <li><a href='#section-btn-standard'>Standard</a></li>
+                        <li><a href='#section-btn-function'>Funktion</a></li>
+                        <li><a href='#section-btn-positive'>Positiv</a></li>
+                        <li><a href='#section-btn-negative'>Negativ</a></li>
+                    </ul>
+                </li>
+                <li><a href='#tables'>Tabeller</a>
+                    <ul class='sub-menu'>
+                        <li><a href='#table-cols'>Kolumner</a></li>
+                        <li><a href='#table-rows'>Rader</a></li>
+                    </ul>
+                </li>
+                <li><a href='#navigation'>Navigation</a></li>
+                <li><a href='#messages'>Meddelanden</a></li>
+                <li><a href='#loadingIndicator'>Laddningsindikator</a></li>
+                <li><a href='#panels'>Paneler</a></li>
+                <li><a href='#forms'>Formulär</a></li>
+                <li><a href='#colors'>Färgschema</a></li>
+                <li><a href='#logo'>Loggor</a></li>
+                <li><a href='#code'>Kod</a></li>
+
+            </ul>
+        </nav>
+        <main id='content-area' tabindex='-1' style='outline: none;'>
+
+            <!--********************************************************
+            INTRODUCTION
+            *********************************************************-->
+            <h1>Wigellkoncernens styleguide</h1>
+            <section id='introduction'>
+                <h2>Välkommen</h2>
+                <p>Välj en komponent i menyn för att se våra riktlinjer.</p>
+            </section>
+            <!--********************************************************
+            HEADERS
+            *********************************************************-->
+            <section id='headlines'>
+                <h2>Rubriker</h2>
+                <p>Wigellkoncernen använder Montserrat för alla rubriker för att ge ett modernt och stabilt intryck.
+                    Kopiera den gemensamma css-koden samt css för de rubriker du använder.
+                </p>
+
+                <div class='code-header'>CSS</div>
+                <div class='code-container'>
+                    <pre><code>h1, h2, h3, h4 {
+    color: #2D5E4A;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}                    </code></pre>
+                    <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                </div>
+
+                <div class='component-demo'>
+                    <div class='preview' style='display: block; text-align: left;'>
+                        <h1>H1: Huvudrubrik</h1>
+                        <div class='code-header'>HTML</div>
+                        <div class='code-container'>
+                            <pre><code>&lt;h1&gt;Huvudrubrik&lt;/h1&gt;
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <div class='code-header'>CSS</div>
+                        <div class='code-container'>
+                            <pre><code>h1 { 
+    font-size: 2.5rem; 
+}
+                            </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <h2>H2: Sektionsrubrik</h2>
+                        <div class='code-header'>HTML</div>
+                        <div class='code-container'>
+                            <pre><code>&lt;h2&gt;Sektionsrubrik&lt;/h2&gt;
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <div class='code-header'>CSS</div>
+                        <div class='code-container'>
+                            <pre><code>h2 {
+    font-size: 2rem; 
+    border-bottom: 2px solid #AAB3A3; 
+    padding-bottom: 5px; 
+}
+                            </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <h3>H3: 1. Underkategori</h3>
+                        <div class='code-header'>HTML</div>
+                        <div class='code-container'>
+                            <pre><code>&lt;h3&gt;Underkategori&lt;/h3&gt;
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <div class='code-header'>CSS</div>
+                        <div class='code-container'>
+                            <pre><code>h3 {
+    font-size: 1.5rem; 
+}
+                            </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <h4>H4: Liten rubrik / Etikett</h4>
+                        <div class='code-header'>HTML</div>
+                        <div class='code-container'>
+                            <pre><code>&lt;h4&gt;Liten rubrik / Etikett&lt;/h4&gt;
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <div class='code-header'>CSS</div>
+                        <div class='code-container'>
+                            <pre><code>h4 { 
+    font-size: 1.2rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+                            </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--********************************************************
+            BODY TEXT
+            *********************************************************-->
+            <section id='bodytext'>
+                <h2>Brödtext</h2>
+                <p>För längre texter och stycken använder vi en väl tilltagen radhöjd för att säkerställa god
+                    läsbarhet på alla skärmar.</p>
+
+                <div class='component-demo'>
+                    <div class='preview' style='display: block; text-align: left;'>
+                        <p>Detta är ett exempel på hur ett vanligt textstycke ser ut. Wigellkoncernen strävar alltid
+                            efter <strong>tydlig kommunikation</strong> och professionalism. Genom att använda rätt
+                            radavstånd blir texten lätt att skanna av och behaglig att läsa även under längre
+                            sessioner.</p>
+                        <p><em>Tips: Använd korta stycken för att göra innehållet mer lättillgängligt för
+                                användaren.</em></p>
+                    </div>
+
+                    <div class='code-header'>HTML</div>
+                    <div class='code-container'>
+                        <pre><code>&lt;p&gt;Text &lt;strong&gt;text&lt;/strong&gt; text.&lt;/p&gt;
+                        </code></pre>
+                        <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                    </div>
+                    <div class='code-header'>CSS</div>
+                    <div class='code-container'>
+                        <pre><code>p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+strong {
+    font-weight: 700;
+    color: #2D5E4A;
+}
+
+em {
+    font-style: italic;
+}
+            </code></pre>
+                        <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                    </div>
+                </div>
+            </section>
+            </section>
+            <!--********************************************************
+            BUTTONS
+            *********************************************************-->
+            <section id='buttons'>
+                <h2>Knappar</h2>
+                <p>Vi använder fyra huvudtyper av knappar för att guida användaren rätt.
+                    Alla knappar anväder samma grund-css, kopiera nedan.</p>
+                <div class='component-demo'>
+                    <div class='code-header'>CSS</div>
+                    <div class='code-container'>
+                        <pre><code>.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    display: inline-block;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+                        </code></pre>
+                        <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                    </div>
+                </div>
+                <!--********************************************************
+                STANDARD
+                *********************************************************-->
+                <section id='section-btn-standard'>
+                    <div class='component-demo'>
+                        <h3>1. Standardknapp</h3>
+                        <p>Används för generella handlingar som inte kräver extra uppmärksamhet.</p>
+
+                        <div class='preview'>
+                            <button class='btn btn-standard'>Standardknapp</button>
+                        </div>
+
+                        <div class='code-header'>HTML</div>
+                        <div class='code-container'>
+                            <pre><code>&lt;button class='btn btn-standard'&gt;Standardknapp&lt;/button&gt;
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <div class='code-header'>CSS</div>
+                        <div class='code-container'>
+                            <pre><code>.btn-standard {
+    background-color: #2D5E4A;
+    color: white;
+}
+.btn-standard:hover {
+    background-color: #1e3f32;
+}
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+                    </div>
+
+                    <hr>
+                </section>
+                <!--********************************************************
+                FUNCTION
+                *********************************************************-->
+                <section id='section-btn-function'>
+                    <div class='component-demo'>
+                        <h3>2. Funktionsknapp</h3>
+                        <p>Används för exempelvis Skriv ut, Kopiera.</p>
+
+                        <div class='preview'>
+                            <button class='btn btn-function'>Funktionsknapp</button>
+                        </div>
+
+                        <div class='code-header'>HTML</div>
+                        <div class='code-container'>
+                            <pre><code>&lt;button class='btn btn-function'&gt;Funktionsknapp&lt;/button&gt;
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <div class='code-header'>CSS</div>
+                        <div class='code-container'>
+                            <pre><code>.btn-function {
+    background-color: #AAB3A3;
+    color: #2D5E4A;
+}
+.btn-function:hover {
+    background-color: #8e9986;
+}
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+                    </div>
+
+                    <hr>
+                </section>
+                <!--********************************************************
+                POSITIVE
+                *********************************************************-->
+                <section id='section-btn-positive'>
+                    <div class='component-demo'>
+                        <h3>3. Positiv knapp</h3>
+                        <p>Används för exempelvis OK.</p>
+
+                        <div class='preview'>
+                            <button class='btn btn-positive'>Positiv knapp</button>
+                        </div>
+
+                        <div class='code-header'>HTML</div>
+                        <div class='code-container'>
+                            <pre><code>&lt;button class='btn btn-positive'&gt;Positiv knapp&lt;/button&gt;
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <div class='code-header'>CSS</div>
+                        <div class='code-container'>
+                            <pre><code>.btn-positive {
+    background-color: #4CAF50;
+    color: white;
+}
+.btn-positive:hover {
+    background-color: #388E3C;
+}
+
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+                    </div>
+
+                    <hr>
+                </section>
+                <!--********************************************************
+                NEGATIVE
+                *********************************************************-->
+                <section id='section-btn-negative'>
+                    <div class='component-demo'>
+                        <h3>4. Negativ knapp</h3>
+                        <p>Används för exempelvis avbryt, stäng, ta bort.</p>
+
+                        <div class='preview'>
+                            <button class='btn btn-negative'>Negativ knapp</button>
+                        </div>
+
+                        <div class='code-header'>HTML</div>
+                        <div class='code-container'>
+                            <pre><code>&lt;button class='btn btn-negative'&gt;Negativ knapp&lt;/button&gt;
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <div class='code-header'>CSS</div>
+                        <div class='code-container'>
+                            <pre><code>.btn-negative {
+    background-color: #97351C;
+    color: white;
+}
+.btn-negative:hover {
+    background-color: #782814;
+}
+</code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+                    </div>
+                    <hr>
+                </section>
+
+            </section>
+            <!--********************************************************
+            TABELS
+            *********************************************************-->
+            <section id='tables'>
+                <h2>Tabeller</h2>
+                <!--********************************************************
+                COLUMNS
+                *********************************************************-->
+                <section id='table-cols'>
+                    <h3>1. Tabell med många kolumner</h3>
+                    <p>Används när tabellen har många kolumner. Hjälper användaren att följa en rad från vänster till
+                        höger.
+                    </p>
+                    <div class='component-demo'>
+                        <div class='preview'>
+                            <table class='table-rows'>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Namn</th>
+                                        <th>Ort</th>
+                                        <th>Avdelning</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>001</td>
+                                        <td>Johan v. W</td>
+                                        <td>Eskilstuna</td>
+                                        <td>Ledning</td>
+                                    </tr>
+                                    <tr>
+                                        <td>002</td>
+                                        <td>Maria G</td>
+                                        <td>Västerås</td>
+                                        <td>Produktion</td>
+                                    </tr>
+                                    <tr>
+                                        <td>003</td>
+                                        <td>Erik L</td>
+                                        <td>Eskilstuna</td>
+                                        <td>Lager</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class='code-header'>HTML</div>
+                        <div class='code-container'>
+                            <pre><code>&lt;table class='table-rows'&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;ID&lt;/th&gt;
+            &lt;th&gt;Namn&lt;/th&gt;
+            &lt;th&gt;Ort&lt;/th&gt;
+            &lt;th&gt;Avdelning&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;001&lt;/td&gt;
+            &lt;td&gt;Johan v. W&lt;/td&gt;
+            &lt;td&gt;Eskilstuna&lt;/td&gt;
+            &lt;td&gt;Ledning&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                        </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+                        <div class='code-header'>CSS</div>
+                        <div class='code-container'>
+                            <pre><code>table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+th {
+    background-color: #2D5E4A;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.table-rows tr:nth-child(even) {
+    background-color: #f2f5f1;
+}
+
+.table-rows tr:hover {
+    background-color: #e2e8de;
+}
+                            </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!--********************************************************
+                ROWS
+                *********************************************************-->
+                <section id='table-rows'>
+                    <h3>2. Tabell med många rader</h3>
+                    <p>Används när tabellen har få kolumner men många rader. Hjälper användaren att skilja på olika
+                        datatyper vertikalt.</p>
+                    <div class='component-demo'>
+                        <div class='preview'>
+                            <table class='table-cols'>
+                                <thead>
+                                    <tr>
+                                        <th>Egenskap</th>
+                                        <th>Värde</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Material</td>
+                                        <td>Ek</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vikt</td>
+                                        <td>45 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Höjd</td>
+                                        <td>120 cm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bredd</td>
+                                        <td>80 cm</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class='code-header'>HTML</div>
+                        <div class='code-container'>
+                            <pre><code>&lt;table class='table-cols'&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th>Egenskap&lt;/th&gt;
+            &lt;th>Värde&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Material&lt;/td&gt;
+            &lt;td&gt;Ek&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                            </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                        <div class='code-header'>CSS</div>
+                        <div class='code-container'>
+                            <pre><code>table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+th {
+    background-color: #2D5E4A;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.table-cols td:nth-child(even) {
+    background-color: #f2f5f1;
+}
+
+.table-cols th:nth-child(even) {
+    background-color: #224738;
+}
+
+.table-cols tr:hover {
+    background-color: #e2e8de;
+}
+                            </code></pre>
+                            <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+            <!--********************************************************
+            NAVIGATION
+            *********************************************************-->
+            <section id='navigation'>
+                <h2>Navigation</h2>
+
+                <h3>Sidomeny (Sidebar)</h3>
+                <p>Vår huvudsakliga navigering sker via en fast sidomeny till vänster. Här är strukturen och designen
+                    för denna. Undermenyerna göms när menyvalet ej är aktivt för att spara plats.</p>
+                <div class='component-demo'>
+                    <div class='sidebar-example'>
+                        <ul>
+                            <li><a href='#' class='active'>Aktiv länk</a></li>
+                            <li><a href='#'>Standardlänk</a>
+                                <ul class='sub-menu-example'>
+                                    <li><a href='#'>Undermeny</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='#'>Knappar</a></li>
+                        </ul>
+                    </div>
+                    <div class='code-header'>HTML</div>
+                    <div class='code-container'>
+                        <pre><code>&lt;div class='sidebar-example'>
+    &lt;ul>
+        &lt;li&gt;&lt;a href='#' class='active'&gt;Aktiv länk&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href='#'&gt;Standardlänk&lt;/a&gt;
+            &lt;ul class='sub-menu-example'&gt;
+                &lt;li&gt;&lt;a href='#'&gt;Undermeny&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href='#'>Knappar&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;            </code></pre>
+                        <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                    </div>
+
+                    <div class='code-header'>CSS</div>
+                    <div class='code-container'>
+                        <pre><code>.sidebar-example {
+    width: 250px;
+    background-color: #AAB3A3;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    list-style: none;
+}
+
+.sidebar-example ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-example li {
+    margin-bottom: 10px;
+}
+
+.sidebar-example a {
+    text-decoration: none;
+    color: #2D5E4A;
+    display: block;
+    padding: 8px 12px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.sidebar-example a:hover {
+    background-color: #ddd;
+}
+
+.sidebar-example a.active {
+    background-color: #E6E6E6;
+    font-weight: bold;
+
+}
+.sub-menu-example {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.sub-menu-example li a {
+    font-size: 0.95rem;
+    font-weight: 400;  
+    padding: 5px 0;
+    padding-left: 50px;
+    display: block;
+}
+.sub-menu-example {
+    display: none;
+    padding-left: 20px; /* Indrag för att visa hierarki */
+}
+
+.sidebar-example li.open .sub-menu {
+    display: block;
+}                       </code></pre>
+                        <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                    </div>
+                </div>
+            </section>
+            <!--********************************************************
+            MESSAGES
+            *********************************************************-->
+            <section id='messages'>
+                <h2>Meddelanden / paneler</h2>
+                <p>Meddelanden visas som paneler, färgen på vänster sida är samma som på knappen och bakgrundsfärgen är
+                    en ljusare verion av samma färg. Svart text används för tydlighet.</p>
+
+                <div class='alert alert-positive'>
+                    <span><strong>Klart!</strong> Din fil har sparats i Wigell-molnet.</span>
+                    <button class='btn btn-positive'>Ok</button>
+                </div>
+
+                <div class='alert alert-negative'>
+                    <span><strong>Varning!</strong> Du är på väg att radera inställningarna.</span>
+                    <button class='btn btn-negative'>Ångra</button>
+                </div>
+                <div class='code-header'>HTML</div>
+                <div class='code-container'>
+                    <pre><code>&lt;div class='alert alert-positive'&gt;
+    &lt;span&gt;&lt;strong&gt;Klart!&lt;/strong&gt; Din fil har sparats i Wigell-molnet.&lt;/span&gt;
+    &lt;button class='btn btn-positive'&gt;Ok&lt;/button&gt;
+&lt;/div&gt;            </code></pre>
+                    <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                </div>
+
+                <div class='code-header'>CSS</div>
+                <div class='code-container'>
+                    <pre><code>.sidebar-example {
+    width: 250px;
+    background-color: #AAB3A3;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    list-style: none;
+}
+
+.sidebar-example ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-example a {
+    text-decoration: none;
+    color: #2D5E4A;
+    display: block;
+    padding: 12px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sidebar-example a:hover {
+    background-color: #ddd;
+}
+
+.sidebar-example .sub-menu {
+    padding-left: 20px;
+}
+                        </code></pre>
+                    <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                </div>
+
+            </section>
+            <!--********************************************************
+            LOADING INDICATOR
+            *********************************************************-->
+
+            <section id='loadingIndicator'>
+                <h2>Laddningsindikator</h2>
+                <p>Används för att visa att systemet bearbetar data. Vi använder en cirkulär animation för att indikera
+                    väntetid.</p>
+
+                <div class='component-demo'>
+                    <div class='preview'>
+                        <div class='loader-container'>
+                            <span class='loader'></span>
+                            <span class='loader-text'>Laddar innehåll...</span>
+                        </div>
+
+                        <div class='loader-container'>
+                            <span class='loader loader-alert'></span>
+                            <span class='loader-text'>Bearbetar ändringar...</span>
+                        </div>
+                    </div>
+
+                    <div class='code-header'>HTML</div>
+                    <div class='code-container'>
+                        <pre><code>&lt;div class='loader-container'&gt;
+    &lt;span class='loader'&gt;&lt;/span&gt;
+    &lt;span class='loader-text'&gt;Laddar innehåll...&lt;/span&gt;
+&lt;/div&gt;
+                        </code></pre>
+                        <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                    </div>
+
+                    <div class='code-header'>CSS</div>
+                    <div class='code-container'>
+                        <pre><code>.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #AAB3A3;
+    border-bottom-color: #2D5E4A;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+                        </code></pre>
+                        <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                    </div>
+                </div>
+            </section>
+            <!--********************************************************
+            PANELS
+            *********************************************************-->
+            <section id='panels'>
+                <h2>Paneler</h2>
+                <p>Paneler, färgen på vänster sida är samma färger som finns för medelanden och knappar för en bra
+                    sammanhållning,
+                    samma med bakgrundsfärgen, en ljusare variant av knapparnas färger.
+                    Svart text används för tydlighet.</p>
+
+                <div class='panel panel-positive'>
+                    <h3>Slutförd uppgift.</h3>
+                    <p>Utmärkt, högsta betyg!</p>
+                </div>
+
+                <div class='panel panel-neutral'>
+                    <h3>Kommande uppgift.</h3>
+                </div>
+
+                <div class='panel panel-negative'>
+                    <h3>Försenad uppgift.</h3>
+                    <p>Fyyyyy!</p>
+                </div>
+
+                <div class='code-header'>HTML</div>
+                <div class='code-container'>
+                    <pre><code>&lt;div class='panel panel-positive'&gt;
+    &lt;h3&gt;Slutförd uppgift.&lt;/h3&gt;
+    &lt;p&gt;Utmärkt, högsta betyg&lt;/p&gt;
+&lt;/div&gt;
+                        </code></pre>
+                    <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                </div>
+
+                <div class='code-header'>CSS</div>
+                <div class='code-container'>
+                    <pre><code>.panel {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid;
+    border-radius: 4px;
+}
+
+.panel-positive {
+    background-color: #e8f5e9; 
+    border-left-color: #4CAF50; 
+}                       </code></pre>
+                    <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                </div>
+            </section>
+            <!--********************************************************
+            FORMS
+            *********************************************************-->
+
+            <section id='forms'>
+                <h2>Formulär</h2>
+                <p>Våra formulär ska vara enkla att fylla i med tydliga etiketter placerade ovanför varje fält.
+                    Vit bakgrund med Wigell-grön text.</p>
+
+                <div class='component-demo'>
+                    <div class='preview'>
+                        <form class='form-example' onsubmit='return false;'>
+                            <div class='form-group'>
+                                <label for='name'>Namn</label>
+                                <input type='text' id='name' placeholder='För- och efternamn'>
+                            </div>
+
+                            <div class='form-group'>
+                                <label for='department'>Avdelning</label>
+                                <select id='department'>
+                                    <option value='prod'>Produktion</option>
+                                    <option value='adm'>Administration</option>
+                                    <option value='led'>Ledning</option>
+                                </select>
+                            </div>
+
+                            <div class='form-group'>
+                                <label for='message'>Meddelande</label>
+                                <textarea id='message' rows='4' placeholder='Skriv ditt meddelande här...'></textarea>
+                            </div>
+
+                            <button type='submit' class='btn btn-standard'>Skicka formulär</button>
+                        </form>
+                    </div>
+
+                    <div class='code-header'>HTML</div>
+                    <div class='code-container'>
+                        <pre><code>&lt;form&gt;
+  &lt;div class='form-group'&gt;
+    &lt;label&gt;Namn&lt;/label&gt;
+    &lt;input type='text'&gt;
+  &lt;/div&gt;
+  &lt;button class='btn btn-standard'&gt;Skicka&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                    </div>
+
+                    <div class='code-header'>CSS</div>
+                    <div class='code-container'>
+                        <pre><code>.form-example {
+    max-width: 500px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2D5E4A;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #2D5E4A;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2D5E4A;
+    box-shadow: 0 0 5px rgba(45, 94, 74, 0.2);
+}                       </code></pre>
+                        <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                    </div>
+                </div>
+            </section>
+            <!--********************************************************
+            COLORS
+            *********************************************************-->
+            <section id='colors'>
+                <h2>Färgschema</h2>
+                <p>Vår palett är inspirerad av naturen, vilket speglar Wigells bredd och stabilitet.
+                    För vanlig brödtext används svart färg för tydlighet, i rubriker används Wigell-grön.<br>
+                    För tydlighet används gärna root-variabler i CSS.
+                </p>
+
+                <div class='color-grid'>
+                    <div class='color-card'>
+                        <div class='color-swatch' style='background-color: #2D5E4A;'></div>
+                        <div class='color-info'>
+                            <span class='color-name'>Wigell-grön</span>
+                            <span class='color-code'>#2D5E4A</span>
+                        </div>
+                    </div>
+
+                    <div class='color-card'>
+                        <div class='color-swatch' style='background-color: #D5E0CC;'></div>
+                        <div class='color-info'>
+                            <span class='color-name'>Bakgrund i main</span>
+                            <span class='color-code'>#D5E0CC</span>
+                        </div>
+                    </div>
+                    <div class='color-card'>
+                        <div class='color-swatch' style='background-color: #AAB3A3;'></div>
+                        <div class='color-info'>
+                            <span class='color-name'>Sidebar, funktionsknapp, neutral</span>
+                            <span class='color-code'>#AAB3A3</span>
+                        </div>
+                    </div>
+
+                    <div class='color-card'>
+                        <div class='color-swatch' style='background-color: #E6E6E6;'></div>
+                        <div class='color-info'>
+                            <span class='color-name'>Bakgrund, neutral</span>
+                            <span class='color-code'>#E6E6E6</span>
+                        </div>
+                    </div>
+                    <div class='color-card'>
+                        <div class='color-swatch' style='background-color: #97351C;'></div>
+                        <div class='color-info'>
+                            <span class='color-name'>Negativa knappar</span>
+                            <span class='color-code'>#97351C</span>
+                        </div>
+                    </div>
+
+                    <div class='color-card'>
+                        <div class='color-swatch' style='background-color: #FDF2F2;'></div>
+                        <div class='color-info'>
+                            <span class='color-name'>Bakgrund, negativ</span>
+                            <span class='color-code'>#FDF2F2</span>
+                        </div>
+                    </div>
+
+                    <div class='color-card'>
+                        <div class='color-swatch' style='background-color: #4CAF50;'></div>
+                        <div class='color-info'>
+                            <span class='color-name'>Positiva knappar</span>
+                            <span class='color-code'>#4CAF50</span>
+                        </div>
+                    </div>
+
+                    <div class='color-card'>
+                        <div class='color-swatch' style='background-color: #e8f5e9;'></div>
+                        <div class='color-info'>
+                            <span class='color-name'>Bakgrund, positiv</span>
+                            <span class='color-code'>#e8f5e9</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class='code-header'>CSS</div>
+                <div class='code-container'>
+                    <pre><code>:root {
+    --wigell-color: #2D5E4A;
+    --background-main-color: #D5E0CC;
+    --background-sidebar-color: #AAB3A3;
+    --background-neutral-color: #E6E6E6;
+    --negative-color: #97351C;
+    --background-negative-color: #FDF2F2;
+    --positive-color: #4CAF50;
+    --background-positive-color: #E8F5E9;
+}
+    /*Ex. användning av variabel*/
+    background-color: var(--background-main-color);
+                       </code></pre>
+                    <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                </div>
+            </section>
+            <!--********************************************************
+            LOGOS
+            *********************************************************-->
+            <section id='logo'>
+                <h2>Wigells loggor</h2>
+                <p>Använd den logga som passar in på bakgrundsfärg. Centrera loggan.<br>
+                    Filerna läggs i en underkatalog img.</p>
+                <div class='gallery'>
+                    <figure>
+                        <img src='img/wigellLogo_white.jpg' alt='wigellLogo_white...'>
+                        <figcaption>Logga med vit bakgrund för vita bakgrunder</figcaption>
+                    </figure>
+                    <figure>
+                        <img src='img/wigellLogo_semilight.jpg' alt='wigellLogo_white...'>
+                        <figcaption>Logga med ljus bakgrund för ljusa bakgrunder</figcaption>
+                    </figure>
+                    <figure>
+                        <img src='img/wigellLogo_semidark.jpg' alt='wigellLogo_white...'>
+                        <figcaption>Logga med halvmörk bakgrund för halvmörka bakgrunder</figcaption>
+                    </figure>
+                    <figure>
+                        <img src='img/wigellLogo_dark.jpg' alt='wigellLogo_white...'>
+                        <figcaption>Logga med mörkgrön bakgrund för mörka bakgrunder</figcaption>
+                    </figure>
+                </div>
+                <div class='code-header'>HTML</div>
+                <div class='code-container'>
+                    <pre><code>&lt;img id='sidebar-logo' src='img/wigellLogo_semidark.jpg'&gt;
+
+                    </code></pre>
+
+                    <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                </div>
+
+                <div class='code-header'>CSS</div>
+                <div class='code-container'>
+                    <pre><code>#sidebar-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    height: auto;
+    padding: 20px 0;
+ }                      </code></pre>
+                    <button class='btn btn-function btn-copy' onclick='copyCode(this)'>Kopiera</button>
+                </div>
+            </section>
+
+            <!--********************************************************
+            CODE AND NAMING
+            *********************************************************-->
+            <section id='code'>
+                <h2>Kod och namnsättning</h2>
+                <p>I koden använder vi ' istället för " för ett modernare intryck.
+                    Som namnstandard, använd beskrivande namn, all kod och kommentarer skrivs på engelska.
+                    Id och class-namn används ett beskrivande namn så som 'btn-positive', btn för att förklara att det
+                    handlar om en knapp och -positive som förklaring vad det hör till.<br>
+                    I JavaScript används camelCase, ex toggleMenu(), i CSS och HTML används kebab-case, ex btn-standard,
+                    används klasser används PascalCase, ex UserInterface.<br>
+                    För filnamn används små bokstäver.
+                </p>
+                <p>Standard för tab är fyra space.</p>
+            </section>
+
+        </main>
+    </div>
+    <script src='script.js'></script>
+</body>

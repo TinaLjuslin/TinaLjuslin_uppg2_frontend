@@ -1,0 +1,93 @@
+/********************************************************
+    MEDIA
+*********************************************************/
+    .sidebar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: auto;
+        z-index: 1000;
+        background: #AAB3A3;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        /* Avstånd mellan logga och första menyval */
+    }
+
+    .sidebar h1 {
+        display: none;
+    }
+
+    .sidebar ul {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px 0;
+        gap: 10px;
+        margin: 0;
+        /* Ta bort standard-marginaler */
+        list-style: none;
+        -webkit-overflow-scrolling: touch;
+        flex-grow: 1;
+        /* Låt menyn ta upp resten av platsen */
+    }
+
+    .sidebar li {
+        display: inline-block;
+    }
+
+    .sidebar a {
+        color: white;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        border-radius: 4px;
+        background: #2D5E4A;
+    }
+
+    .sub-menu {
+        display: none !important;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .preview {
+        padding: 20px;
+        overflow-x: auto;
+    }
+
+    .table-container,
+    .code-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        font-size: 0.8rem;
+    }
+
+
+    .btn {
+        margin-bottom: 10px;
+    }
