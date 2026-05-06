@@ -8,6 +8,7 @@
     --positive-color: #4CAF50;
     --background-positive-color: #E8F5E9;
 }
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
@@ -18,11 +19,12 @@ html {
     align-items: flex-start;
     min-height: 100vh;
 }
-main > section {
+
+main>section {
     display: none;
 }
 
-main > section.active {
+main>section.active {
     display: block;
 }
 
@@ -38,7 +40,7 @@ body {
 
 /********************************************************
     SIDEBAR
-*********************************************************/            
+*********************************************************/
 .sidebar {
     position: fixed;
     top: 0;
@@ -87,6 +89,7 @@ body {
     font-weight: bold;
 
 }
+
 .sub-menu {
     list-style: none;
     margin-bottom: 10px;
@@ -94,19 +97,22 @@ body {
 
 .sub-menu li a {
     font-size: 0.95rem;
-    font-weight: 400;  
+    font-weight: 400;
     padding: 5px 0;
     padding-left: 50px;
     display: block;
 }
+
 .sub-menu {
     display: none;
-    padding-left: 20px; /* Indrag för att visa hierarki */
+    padding-left: 20px;
+    /* Indrag för att visa hierarki */
 }
 
 .sidebar li.open .sub-menu {
     display: block;
 }
+
 /********************************************************
     MAIN
 *********************************************************/
@@ -118,7 +124,7 @@ main {
 
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
 main section {
@@ -298,21 +304,22 @@ td {
 /* rows */
 .table-rows tr:nth-child(even) {
     background-color: #f2f5f1;
-    /* Ljus Wigell-grön/grå */
+}
+
+.table-rows tr:hover {
+    background-color: #e2e8de;
 }
 
 /* columns */
 .table-cols td:nth-child(even) {
     background-color: #f2f5f1;
 }
+
 .table-cols th:nth-child(even) {
     background-color: #224738;
 }
 
-.table-rows tr:hover {
-    background-color: #e2e8de;
-}
-.table-cols tr:hover {
+.table-cols tr:hover td {
     background-color: #e2e8de;
 }
 
@@ -355,6 +362,7 @@ td {
     font-weight: bold;
 
 }
+
 .sub-menu-example {
     list-style: none;
     margin-bottom: 10px;
@@ -362,19 +370,22 @@ td {
 
 .sub-menu-example li a {
     font-size: 0.95rem;
-    font-weight: 400;  
+    font-weight: 400;
     padding: 5px 0;
     padding-left: 50px;
     display: block;
 }
+
 .sub-menu-example {
     display: none;
-    padding-left: 20px; /* Indrag för att visa hierarki */
+    padding-left: 20px;
+    /* Indrag för att visa hierarki */
 }
 
 .sidebar-example li.open .sub-menu {
     display: block;
 }
+
 /********************************************************
     MESSAGES
 *********************************************************/
@@ -383,7 +394,7 @@ td {
     margin-bottom: 20px;
     border-radius: 4px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     border-left: 5px solid;
@@ -415,8 +426,8 @@ td {
 .loader {
     width: 48px;
     height: 48px;
-    border: 5px solid var(--background-sidebar-color); 
-    border-bottom-color: var(--wigell-color); 
+    border: 5px solid var(--background-sidebar-color);
+    border-bottom-color: var(--wigell-color);
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
@@ -431,6 +442,7 @@ td {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -441,6 +453,7 @@ td {
     color: #333;
     font-size: 0.9rem;
 }
+
 /********************************************************
     PANELS
 *********************************************************/
@@ -452,20 +465,21 @@ td {
 }
 
 .panel-positive {
-    background-color: var(--background-positive-color); 
-    border-left-color: var(--positive-color); 
+    background-color: var(--background-positive-color);
+    border-left-color: var(--positive-color);
 }
 
 .panel-negative {
     background-color: #ffebee;
-    border-left-color: var(--negative-color); 
+    border-left-color: var(--negative-color);
 }
 
 .panel-neutral {
     background-color: var(--background-neutral-color);
-    border-left-color: var(--background-sidebar-color); 
+    border-left-color: var(--background-sidebar-color);
     color: #333;
 }
+
 /********************************************************
     FORM
 *********************************************************/
@@ -489,8 +503,8 @@ td {
     color: var(--wigell-color);
 }
 
-.form-group input, 
-.form-group textarea, 
+.form-group input,
+.form-group textarea,
 .form-group select {
     width: 100%;
     padding: 12px;
@@ -500,7 +514,7 @@ td {
     box-sizing: border-box;
 }
 
-.form-group input:focus, 
+.form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--wigell-color);
@@ -523,7 +537,7 @@ td {
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .color-swatch {
@@ -550,4 +564,3 @@ td {
     color: #666;
     text-transform: uppercase;
 }
-

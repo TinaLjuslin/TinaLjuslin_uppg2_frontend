@@ -11,7 +11,6 @@
         display: flex;
         align-items: center;
         gap: 5px;
-        /* Avstånd mellan logga och första menyval */
     }
 
     .sidebar h1 {
@@ -25,11 +24,9 @@
         padding: 10px 0;
         gap: 10px;
         margin: 0;
-        /* Ta bort standard-marginaler */
         list-style: none;
         -webkit-overflow-scrolling: touch;
         flex-grow: 1;
-        /* Låt menyn ta upp resten av platsen */
     }
 
     .sidebar li {

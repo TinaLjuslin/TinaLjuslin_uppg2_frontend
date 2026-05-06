@@ -1,3 +1,4 @@
+// To get main to show right choice and scroll up and highlight the chosen menu-choice
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.sidebar a');
     const mainSections = document.querySelectorAll('main > section');
